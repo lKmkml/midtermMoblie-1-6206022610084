@@ -51,10 +51,16 @@ class _FormState extends State<Form> {
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
                 'assets/images/img1.png',
-                width: 100,
-                height: 80,
+                width: 150,
+                height: 150,
               ),
             ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Laptop 25,000',
+                  textAlign: TextAlign.center,
+                )),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
@@ -64,6 +70,9 @@ class _FormState extends State<Form> {
               ),
             ),
             Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('pc 70,000', textAlign: TextAlign.center)),
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
                 'assets/images/img3.jpg',
@@ -71,6 +80,9 @@ class _FormState extends State<Form> {
                 height: 80,
               ),
             ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('Tablet 26,000', textAlign: TextAlign.center)),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
@@ -95,6 +107,9 @@ class _FormState extends State<Form> {
                     border: OutlineInputBorder(), labelText: 'ราคา'),
               ),
             ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('งวดที่ต้องการผ่อน', textAlign: TextAlign.center)),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -134,7 +149,7 @@ class _FormState extends State<Form> {
                   ),
                 );
               },
-              child: Text('สรุปการสมัคร'),
+              child: Text('สรุปยอด'),
             )
           ],
         ),

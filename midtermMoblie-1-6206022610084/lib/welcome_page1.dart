@@ -6,7 +6,11 @@ class WelcomePage extends StatelessWidget {
   String name, price, dropdownvalue1;
 
   double wh = 0, total = 0, total1 = 0, total2 = 0, total3 = 0, total4 = 0;
-  WelcomePage({Key? key, required this.price, required this.dropdownvalue1, required this.name})
+  WelcomePage(
+      {Key? key,
+      required this.price,
+      required this.dropdownvalue1,
+      required this.name})
       : super(key: key);
 
   @override
@@ -16,76 +20,76 @@ class WelcomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('สรุปรายละเอียด'),
       ),
-      body:  Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('ชื่อ : '),
-                      subtitle: Text(' $name'),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('ราคา : '),
-                      subtitle: Text(' $price'),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('จำนวนงวด : '),
-                      subtitle: Text(' $dropdownvalue1'),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('ดอกเบี้ย : '),
-                      subtitle: Text(
-                          ' ' + nunberAdd2(double.parse(dropdownvalue1)).toString() + '%'),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('ดอกเบี้ยทั้งหมด : '),
-                      subtitle: Text(' ' +
-                          f
-                              .format(
-                                  nunberAdd(double.parse(dropdownvalue1), double.parse(w)))
-                              .toString()),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('จำนวนผ่อนต่องวด : '),
-                      subtitle: Text(' ' +
-                          f
-                              .format(
-                                  numberAdd3(double.parse(dropdownvalue1), double.parse(w)))
-                              .toString()),
-                    )),
-                Card(
-                    elevation: 5,
-                    margin: const EdgeInsets.all(1),
-                    child: ListTile(
-                      title: Text('จำนวนเงินทั้งหมด เมื่อผ่อนครบ : '),
-                      subtitle: Text(' ' +
-                          f
-                              .format(
-                                  nunberAdd4(double.parse(dropdownvalue1), double.parse(w)))
-                              .toString()),
-                    )),
-              ],
-            ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('ชื่อ : '),
+                    subtitle: Text(' $name'),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('ราคา : '),
+                    subtitle: Text(' $price'),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('จำนวนงวด : '),
+                    subtitle: Text(' $dropdownvalue1'),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('ดอกเบี้ย : '),
+                    subtitle: Text(' ' +
+                        nunberAdd2(double.parse(dropdownvalue1)).toString() +
+                        '%'),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('ดอกเบี้ยทั้งหมด : '),
+                    subtitle: Text(' ' +
+                        f
+                            .format(nunberAdd(double.parse(dropdownvalue1),
+                                double.parse(price)))
+                            .toString()),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('จำนวนผ่อนต่องวด : '),
+                    subtitle: Text(' ' +
+                        f
+                            .format(numberAdd3(double.parse(dropdownvalue1),
+                                double.parse(price)))
+                            .toString()),
+                  )),
+              Card(
+                  elevation: 5,
+                  margin: const EdgeInsets.all(1),
+                  child: ListTile(
+                    title: Text('จำนวนเงินทั้งหมด เมื่อผ่อนครบ : '),
+                    subtitle: Text(' ' +
+                        f
+                            .format(nunberAdd4(double.parse(dropdownvalue1),
+                                double.parse(price)))
+                            .toString()),
+                  )),
+            ],
           ),
         ),
       ),
