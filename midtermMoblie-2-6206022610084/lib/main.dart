@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'welcome_page1.dart';
+import 'welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,38 +47,6 @@ class _FormState extends State<Form> {
         child: ListView(
           shrinkWrap: true,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/img1.png',
-                width: 100,
-                height: 80,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/img2.jpg',
-                width: 100,
-                height: 80,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/img3.jpg',
-                width: 100,
-                height: 80,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/img4.jpg',
-                width: 100,
-                height: 80,
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
