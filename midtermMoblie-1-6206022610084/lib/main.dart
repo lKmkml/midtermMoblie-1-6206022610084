@@ -30,12 +30,12 @@ class Form extends StatefulWidget {
 class _FormState extends State<Form> {
   TextEditingController _name = TextEditingController();
   TextEditingController _price = TextEditingController();
-  String _dropdownvalue1 = '6 งวด ดอกเบี้ย 0%';
+  String _dropdownvalue1 = '6';
 
   var items1 = [
-    '6 งวด ดอกเบี้ย 0%',
-    '10 งวด ดอกเบี้ย 1%',
-    '12 งวด ดอกเบี้ย 2%',
+    '6',
+    '10',
+    '12',
   ];
   @override
   Widget build(BuildContext context) {

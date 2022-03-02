@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class WelcomePage extends StatelessWidget {
-  String w, e, n;
+  String name, price, dropdownvalue1;
 
   double wh = 0, total = 0, total1 = 0, total2 = 0, total3 = 0, total4 = 0;
-  WelcomePage({Key? key, required this.w, required this.e, required this.n})
+  WelcomePage({Key? key, required this.price, required this.dropdownvalue1, required this.name})
       : super(key: key);
 
   @override
@@ -16,13 +16,7 @@ class WelcomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('สรุปรายละเอียด'),
       ),
-      body: Container(
-        constraints: BoxConstraints.expand(),
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/wall.jpg"),
-                fit: BoxFit.cover)),
-        child: Center(
+      body:  Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Column(
@@ -33,21 +27,21 @@ class WelcomePage extends StatelessWidget {
                     margin: const EdgeInsets.all(1),
                     child: ListTile(
                       title: Text('ชื่อ : '),
-                      subtitle: Text(' $n'),
+                      subtitle: Text(' $name'),
                     )),
                 Card(
                     elevation: 5,
                     margin: const EdgeInsets.all(1),
                     child: ListTile(
                       title: Text('ราคา : '),
-                      subtitle: Text(' $w'),
+                      subtitle: Text(' $price'),
                     )),
                 Card(
                     elevation: 5,
                     margin: const EdgeInsets.all(1),
                     child: ListTile(
                       title: Text('จำนวนงวด : '),
-                      subtitle: Text(' $e'),
+                      subtitle: Text(' $dropdownvalue1'),
                     )),
                 Card(
                     elevation: 5,
@@ -55,7 +49,7 @@ class WelcomePage extends StatelessWidget {
                     child: ListTile(
                       title: Text('ดอกเบี้ย : '),
                       subtitle: Text(
-                          ' ' + nunberAdd2(double.parse(e)).toString() + '%'),
+                          ' ' + nunberAdd2(double.parse(dropdownvalue1)).toString() + '%'),
                     )),
                 Card(
                     elevation: 5,
@@ -65,7 +59,7 @@ class WelcomePage extends StatelessWidget {
                       subtitle: Text(' ' +
                           f
                               .format(
-                                  nunberAdd(double.parse(e), double.parse(w)))
+                                  nunberAdd(double.parse(dropdownvalue1), double.parse(w)))
                               .toString()),
                     )),
                 Card(
@@ -76,7 +70,7 @@ class WelcomePage extends StatelessWidget {
                       subtitle: Text(' ' +
                           f
                               .format(
-                                  numberAdd3(double.parse(e), double.parse(w)))
+                                  numberAdd3(double.parse(dropdownvalue1), double.parse(w)))
                               .toString()),
                     )),
                 Card(
@@ -87,7 +81,7 @@ class WelcomePage extends StatelessWidget {
                       subtitle: Text(' ' +
                           f
                               .format(
-                                  nunberAdd4(double.parse(e), double.parse(w)))
+                                  nunberAdd4(double.parse(dropdownvalue1), double.parse(w)))
                               .toString()),
                     )),
               ],
